@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Training Chatbot Wireframe</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f2f2f2;
+        }
+
+        section{
+            padding:40px 80px;
+            background:white;
+            margin-bottom:10px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        /* Top Hero */
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .hero-text{
+            width:55%;
+        }
+
+        .hero-video{
+            width:40%;
+            height:200px;
+            background:#ccc;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .btn{
+            padding:10px 20px;
+            margin-right:10px;
+            background:gray;
+            color:white;
+            border:none;
+        }
+
+        /* Problem cards */
+        .cards{
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .card{
+            width:22%;
+            background:#e6e6e6;
+            padding:20px;
+            text-align:center;
+        }
+
+        /* Two column */
+        .two-col{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .two-col .left{
+            width:45%;
+            height:180px;
+            background:#ccc;
+        }
+
+        .two-col .right{
+            width:50%;
+        }
+
+        /* Steps */
+        .steps{
+            display:flex;
+            justify-content:space-between;
+            text-align:center;
+        }
+
+        .step{
+            width:22%;
+        }
+
+        /* Features */
+        .features{
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .feature-box{
+            width:48%;
+            background:#e6e6e6;
+            padding:20px;
+        }
+
+        /* Benefits */
+        .benefits{
+            display:flex;
+            justify-content:space-between;
+            text-align:center;
+        }
+
+        .benefit{
+            width:22%;
+            background:#e6e6e6;
+            padding:15px;
+        }
+
+        /* Security */
+        .security{
+            display:flex;
+            justify-content:space-between;
+            text-align:center;
+        }
+
+        .sec-box{
+            width:18%;
+            background:#e6e6e6;
+            padding:15px;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#ddd;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<section>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>AI-Powered Internal Training Chatbot</h1>
+            <p>Train Smarter. Learn Faster.</p>
+           <button class="btn" onclick="showMessage('Demo Requested')">Request Demo</button>
+            <button class="btn" onclick="showMessage('Connecting to AI Team')">Talk to AI Team</button>
+
+        </div>
+
+        <div class="hero-video">
+            Video Area
+        </div>
+    </div>
+</section>
+
+<div style="text-align:center; padding:20px; background:#e6e6e6;">
+    <h3 id="display">Click any section button to see interaction</h3>
+</div>
+
+
+<!-- PROBLEM SECTION -->
+<section>
+    <h2>The Problem with Traditional Training</h2>
+    <div class="cards">
+       <div class="card" onclick="showMessage('Problem: Videos Hard to Find')">
+        Videos Hard to Find
+        </div>
+
+        <div class="card" onclick="showMessage('Problem: Repetitive Questions')">
+         Repetitive Questions
+        </div>
+
+        <div class="card" onclick="showMessage('Problem: Slow Onboarding')">
+        Slow Onboarding
+        </div>
+
+    </div>
+</section>
+
+<!-- AI CHATBOT SECTION -->
+<section>
+    <h2>Our AI-Powered Training Chatbot</h2>
+    <div class="two-col">
+        <div class="left">Video Area</div>
+        <div class="right">
+            <ul>
+                <li>Ask in Natural Language</li>
+                <li>Find SOPs & Videos</li>
+                <li>Get Exact Answers</li>
+            </ul>
+            <button class="btn">Instantly Find the Training You Need</button>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">Upload Content</div>
+        <div class="step">AI Processes</div>
+        <div class="step">Ask a Question</div>
+        <div class="step">Get Smart Answers</div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+    <h2>Key Features</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Core Features</h3>
+            <ul>
+                <li>AI Chat Search</li>
+                <li>Video Timestamps</li>
+                <li>Role-Based Access</li>
+            </ul>
+        </div>
+
+        <div class="feature-box">
+            <h3>Advanced Features</h3>
+            <ul>
+                <li>Learning Paths</li>
+                <li>Analytics & Reports</li>
+                <li>Voice & Multilingual</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- BUSINESS BENEFITS -->
+<section>
+    <h2>Business Benefits</h2>
+    <div class="benefits">
+        <div class="benefit">Enterprises</div>
+        <div class="benefit">HR & L&D</div>
+        <div class="benefit">Manufacturing</div>
+        <div class="benefit">IT Companies</div>
+    </div>
+</section>
+
+<!-- SECURITY -->
+<section>
+    <h2>Security & Compliance</h2>
+    <div class="security">
+        <div class="sec-box">Data Privacy</div>
+        <div class="sec-box">Access Control</div>
+        <div class="sec-box">Secure Hosting</div>
+        <div class="sec-box">Encrypted Data</div>
+        <div class="sec-box">Compliance</div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section>
+    <h2>Why Choose Cputek?</h2>
+    <ul>
+        <li>Custom Solutions</li>
+        <li>Enterprise Expertise</li>
+        <li>Ongoing Support</li>
+    </ul>
+</section>
+
+<footer>
+    Request a Demo | Free Consultation
+</footer>
+
+<script>
+function showMessage(msg){
+    document.getElementById("display").innerText = msg;
+}
+</script>
+
+
+</body>
+</html>
