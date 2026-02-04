@@ -91,22 +91,23 @@
 <script>
 function toggle(id) {
     var x = document.getElementById(id);
-    // Saare dropdowns ko check karega
+    
     var allDropdowns = document.getElementsByClassName("dropdown-info");
     
-    // Agar click kiya hua box pehle se khula hai toh band kar do
+    
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
-        // Pehle baaki sabko band karo (clean look ke liye)
+        
         for (var i = 0; i < allDropdowns.length; i++) {
             allDropdowns[i].style.display = "none";
         }
-        // Phir sirf isko kholo
+        
         x.style.display = "block";
     }
 }
 </script>
 
 </body>
+
 </html>
