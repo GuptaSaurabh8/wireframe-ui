@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CPUTEK Interactive Wireframe</title>
+    <style>
+        body { margin:0; font-family: 'Segoe UI', Tahoma, sans-serif; background:#f4f4f4; }
+        section { padding:30px 60px; background:white; margin: 15px 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { text-align:center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; display: inline-block; width: 100%; }
+
+        /* Styling for Clickable Items */
+        .clickable-box {
+            background:#ecf0f1; padding:20px; text-align:center; cursor: pointer;
+            border-radius: 8px; border: 1px solid #bdc3c7; transition: 0.3s;
+            font-weight: bold; position: relative; margin-bottom: 10px;
+        }
+        .clickable-box:hover { background: #3498db; color: white; transform: translateY(-3px); }
+        .clickable-box::after { content: ' ▼'; font-size: 12px; }
+
+        /* The Dropdown Content */
+        .dropdown-info {
+            display:none; padding:15px; background:#fff; border-left: 5px solid #3498db;
+            margin-bottom: 20px; border-radius: 0 0 8px 8px; box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .flex-row { display:flex; justify-content:space-between; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .col { flex: 1; min-width: 200px; }
+
+        .hero { display:flex; justify-content:space-between; align-items:center; }
+        .hero-text { width:55%; }
+        .hero-video { width:35%; height:200px; background:#ddd; display:flex; justify-content:center; align-items:center; border-radius: 10px; }
+        .btn-main { padding:15px 30px; background:#2c3e50; color:white; border:none; border-radius: 5px; cursor:pointer; font-weight:bold; margin-top: 10px; width: 100%; text-align: left;}
+        
+        /* Clean Footer */
+        footer { text-align:center; padding:30px; background:#2c3e50; color:white; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>AI-Powered Training Chatbot</h1>
+            <p>Smart internal training for modern teams.</p>
+            <button class="btn-main" onclick="toggle('d1')">Request Demo ▼</button>
+            <div id="d1" class="dropdown-info">Fill the form to book a live session with our experts.</div>
+            
+            <button class="btn-main" onclick="toggle('d2')">Talk to AI Team ▼</button>
+            <div id="d2" class="dropdown-info">Our AI engineers are available Mon-Fri, 10 AM to 6 PM.</div>
+        </div>
+        <div class="hero-video">Video Presentation</div>
+    </div>
+</section>
+
+<section>
+    <h2>The Problem</h2>
+    <div class="flex-row">
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('p1')">Videos Hard to Find</div>
+            <div id="p1" class="dropdown-info">Employees waste 2 hours daily searching for training files.</div>
+        </div>
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('p2')">Repetitive Questions</div>
+            <div id="p2" class="dropdown-info">HR spends 40% of their time answering the same basic FAQs.</div>
+        </div>
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('p3')">Slow Onboarding</div>
+            <div id="p3" class="dropdown-info">New hires take 3 months to reach full productivity.</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>How It Works</h2>
+    <div class="flex-row">
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('h1')">1. Upload Content</div>
+            <div id="h1" class="dropdown-info">Drag and drop your PDFs, MP4s, and SOPs into the AI.</div>
+        </div>
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('h2')">2. AI Training</div>
+            <div id="h2" class="dropdown-info">AI reads and indexes every word and video timestamp.</div>
+        </div>
+        <div class="col">
+            <div class="clickable-box" onclick="toggle('h3')">3. Instant Support</div>
+            <div id="h3" class="dropdown-info">Employees ask questions in natural language and get answers.</div>
+        </div>
+    </div>
+</section>
+
+<footer> © 2026 CPUTEK | Enterprise Solutions </footer>
+
+<script>
+function toggle(id) {
+    var x = document.getElementById(id);
+    var allDropdowns = document.getElementsByClassName("dropdown-info");
+    
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        for (var i = 0; i < allDropdowns.length; i++) {
+            allDropdowns[i].style.display = "none";
+        }
+        x.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
