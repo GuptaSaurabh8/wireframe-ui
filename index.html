@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CPUTEK - Final Interactive Wireframe</title>
+    <style>
+        body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f2f2f2; color: #333; line-height: 1.6; }
+        section { padding:40px 80px; background:white; margin-bottom:15px; border-bottom: 1px solid #ddd; }
+        h2 { text-align:center; color: #2c3e50; margin-bottom: 30px; }
+
+        /* Clickable Elements */
+        .clickable-item {
+            background:#e6e6e6; padding:15px; margin: 10px 0; border-radius: 5px;
+            cursor: pointer; border-left: 5px solid #7f8c8d; font-weight: bold; transition: 0.3s;
+        }
+        .clickable-item:hover { background: #dcdcdc; border-left-color: #3498db; }
+        
+        .dropdown-info {
+            display:none; padding:15px; background:#f9f9f9; border: 1px solid #ddd;
+            margin-bottom: 20px; border-radius: 5px; font-weight: normal; font-size: 14px;
+        }
+
+        /* Layouts */
+        .hero { display:flex; justify-content:space-between; align-items:center; }
+        .hero-text { width:55%; }
+        .hero-video { width:40%; height:250px; background:#ccc; display:flex; justify-content:center; align-items:center; border: 2px dashed #999; }
+        
+        .flex-grid { display:flex; justify-content:space-between; gap: 15px; flex-wrap: wrap; }
+        .col-3 { width: 31%; }
+        .col-2 { width: 48%; }
+        .col-5 { width: 18%; }
+
+        .btn { padding:12px 25px; background:#444; color:white; border:none; cursor:pointer; font-weight:bold; border-radius: 4px; margin-right: 10px;}
+        footer { text-align:center; padding:40px; background:#ddd; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>AI-Powered Internal Training Chatbot</h1>
+            <p>Train Smarter. Learn Faster. Instantly find the training you need.</p>
+            <button class="btn" onclick="toggle('demo')">Request Demo ▼</button>
+            <button class="btn" onclick="toggle('ai-team')">Talk to AI Team ▼</button>
+            <div id="demo" class="dropdown-info">Schedule a live walkthrough of our AI platform.</div>
+            <div id="ai-team" class="dropdown-info">Speak with our engineers about custom integrations.</div>
+        </div>
+        <div class="hero-video">Intro Video Area</div>
+    </div>
+</section>
+
+<section>
+    <h2>The Problem with Traditional Training</h2>
+    <div class="flex-grid">
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('p1')">Videos Hard to Find ▼</div>
+            <div id="p1" class="dropdown-info">Employees waste hours looking for specific topics in long videos.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('p2')">Repetitive Questions ▼</div>
+            <div id="p2" class="dropdown-info">Seniors answer the same basic questions daily.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('p3')">Searching Multiple Tools ▼</div>
+            <div id="p3" class="dropdown-info">Switching between various apps and folders to find one SOP.</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Our AI-Powered Training Chatbot</h2>
+    <div class="hero" style="background: #f9f9f9; padding: 20px; border-radius: 10px;">
+        <div class="hero-video" style="width: 45%;">AI Feature Video</div>
+        <div class="hero-text" style="width: 50%;">
+            <div class="clickable-item" onclick="toggle('chat1')">Ask in Natural Language ▼</div>
+            <div id="chat1" class="dropdown-info">No more keywords. Ask questions like you're talking to a human.</div>
+            
+            <div class="clickable-item" onclick="toggle('chat2')">Find SOPs & Videos ▼</div>
+            <div id="chat2" class="dropdown-info">Instantly pulls up the right document or video timestamp.</div>
+            
+            <button class="btn" style="width:100%; margin-top:10px;">Instantly Find the Training You Need</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>How It Works</h2>
+    <div class="flex-grid">
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('h1')">1. Upload Content ▼</div>
+            <div id="h1" class="dropdown-info">Upload videos, PDFs, and SOP documents.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('h2')">2. AI Processes ▼</div>
+            <div id="h2" class="dropdown-info">AI indexes and understands all your training data.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('h3')">3. Get Smart Answers ▼</div>
+            <div id="h3" class="dropdown-info">Employees get the exact answer instantly.</div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Key Features</h2>
+    <div class="flex-grid">
+        <div class="col-2">
+            <div class="clickable-item" onclick="toggle('kf1')">Core Features ▼</div>
+            <div id="kf1" class="dropdown-info">
+                <ul>
+                    <li>AI Chat Search & Natural Language</li>
+                    <li>Automatic Video Timestamps</li>
+                    <li>Role-Based Access Control</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="clickable-item" onclick="toggle('kf2')">Advanced Features ▼</div>
+            <div id="kf2" class="dropdown-info">
+                <ul>
+                    <li>Personalized Learning Paths</li>
+                    <li>Detailed Analytics & Reports</li>
+                    <li>Voice & Multilingual Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Business Benefits</h2>
+    <div class="flex-grid">
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('b1')">Enterprises ▼</div>
+            <div id="b1" class="dropdown-info">Scalable training for thousands of employees worldwide.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('b2')">HR & L&D ▼</div>
+            <div id="b2" class="dropdown-info">Cut training time by 60%. Automate the onboarding process.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('b3')">Manufacturing ▼</div>
+            <div id="b3" class="dropdown-info">Instant machinery and safety guides for workers.</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Security & Compliance</h2>
+    <div class="flex-grid">
+        <div class="col-5">
+            <div class="clickable-item" onclick="toggle('s1')">Data Privacy ▼</div>
+            <div id="s1" class="dropdown-info">Your data is yours alone.</div>
+        </div>
+        <div class="col-5">
+            <div class="clickable-item" onclick="toggle('s2')">Access Control ▼</div>
+            <div id="s2" class="dropdown-info">Role-based viewing rights.</div>
+        </div>
+        <div class="col-5">
+            <div class="clickable-item" onclick="toggle('s3')">Secure Hosting ▼</div>
+            <div id="s3" class="dropdown-info">Enterprise-grade cloud servers.</div>
+        </div>
+        <div class="col-5">
+            <div class="clickable-item" onclick="toggle('s4')">Encrypted Data ▼</div>
+            <div id="s4" class="dropdown-info">AES-256 bit encryption for all files.</div>
+        </div>
+        <div class="col-5">
+            <div class="clickable-item" onclick="toggle('s5')">Compliance ▼</div>
+            <div id="s5" class="dropdown-info">SOC2 and GDPR ready.</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose Cputek?</h2>
+    <div class="flex-grid">
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('w1')">Custom Solutions ▼</div>
+            <div id="w1" class="dropdown-info">Tailored AI models designed specifically for your unique business requirements.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('w2')">Enterprise Expertise ▼</div>
+            <div id="w2" class="dropdown-info">Proven track record of deploying high-security AI in large organizations.</div>
+        </div>
+        <div class="col-3">
+            <div class="clickable-item" onclick="toggle('w3')">Ongoing Support ▼</div>
+            <div id="w3" class="dropdown-info">Dedicated support team and regular updates to keep your AI running smoothly.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    Request a Demo | Free Consultation | Enterprise Solutions
+</footer>
+
+<script>
+function toggle(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
